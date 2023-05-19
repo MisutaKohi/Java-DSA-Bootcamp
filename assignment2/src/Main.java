@@ -1,27 +1,28 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Armstrong Number:");
-        System.out.println(getArmstrongNum(200, 1000));
-
-
-        System.out.println("Palindrome:");
-        System.out.println("Racecar is " + isPalindrome("racecar"));
-        System.out.println("Pikachu is " + isPalindrome("pikachu"));
-        System.out.println("A is " + isPalindrome("a"));
-
-        System.out.println("Fibonnachi:");
-        System.out.println(getFibonacci(5));
-
-        System.out.println("Rupees to dollars:");
-        System.out.println(convertCurrency(34.34));
+//        System.out.println("Armstrong Number:");
+//        System.out.println(getArmstrongNum(200, 1000));
+//
+//        System.out.println("Palindrome:");
+//        System.out.println("Racecar is " + isPalindrome("racecar"));
+//        System.out.println("Pikachu is " + isPalindrome("pikachu"));
+//        System.out.println("A is " + isPalindrome("a"));
+//
+//        System.out.println("Fibonnachi:");
+//        System.out.println(getFibonacci(5));
+//
+//        System.out.println("Rupees to dollars:");
+//        System.out.println(convertCurrency(34.34));
 //
 //        System.out.println("Larger num:");
-//        System.out.println(compareNums(500, 5000));
-//
-//        System.out.println("Basic calculator:");
-//        System.out.println(calculate());
+//        System.out.println(compareNums(500, 500));
+
+        System.out.println("Basic calculator:");
+        System.out.println(calculate());
 //
 //        System.out.println("Calculate interest:");
 //        System.out.println(calculateInterest(100, 2, 0.22f));
@@ -117,15 +118,48 @@ public class Main {
     /**
      * Take 2 numbers as input and print the largest number.
      */
-    private static double compareNums(int a, int b) {
-        return 0;
+    private static String compareNums(int a, int b) {
+        if (a > b) {
+            return a + "";
+        } else if (b > a) {
+            return b + "";
+        } else {
+            return "equal";
+        }
     }
 
     /**
      * Take in two numbers and an operator (+, -, *, /) and calculate the value. (Use if conditions)
      */
     private static double calculate() {
-        return 0;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Please enter a num: ");
+        double a = input.nextDouble();
+
+        System.out.print("Please enter another num: ");
+        double b = input.nextDouble();
+
+        System.out.print("What do you want to do: +, -, /, or *?: ");
+        String c = input.next();
+
+        String availableSymbols = "+-/*";
+
+        while (c.length() != 1 || availableSymbols.contains(c) != true) {
+            System.out.print("\nPlease try again. What do you want to do: +, -, /, or *?: ");
+            c = input.next();
+        }
+
+        if (c.compareTo("+") == 0) {
+            return a + b;
+        } else if (c.compareTo("-") == 0) {
+            return a - b;
+        } else if (c.compareTo("/") == 0) {
+            return a / b;
+        } else {
+            return a * b;
+        }
     }
 
     /**
