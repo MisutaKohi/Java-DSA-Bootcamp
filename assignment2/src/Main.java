@@ -9,6 +9,7 @@ public class Main {
         System.out.println("Palindrome:");
         System.out.println("Racecar is " + isPalindrome("racecar"));
         System.out.println("Pikachu is " + isPalindrome("pikachu"));
+        System.out.println("A is " + isPalindrome("a"));
 //
 //        System.out.println("Fibonnachi:");
 //        System.out.println(getFibonacci(5));
@@ -68,7 +69,21 @@ public class Main {
      * To find out whether the given String is Palindrome or not.
      */
     private static boolean isPalindrome(String a) {
-        return false;
+
+        int i = 0;
+        int j = a.length() - 1;
+
+        String b = a.toLowerCase();
+
+        while (i <= j) {
+            if (b.charAt(i) != b.charAt(j)) {
+                return false;
+            }
+            i++;
+            j--;
+        }
+
+        return true;
     }
 
     /**
