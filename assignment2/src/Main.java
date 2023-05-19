@@ -27,11 +27,11 @@ public class Main {
 //        System.out.println("Calculate interest:");
 //        System.out.println(calculateInterest(100, 2, 0.22f));
 //
-//        System.out.println("Print greeting:");
-//        printGreeting();
+        System.out.println("Print greeting:");
+        printGreeting();
 //
-        System.out.println("Is even:");
-        System.out.println(isEven(-32));
+//        System.out.println("Is even:");
+//        System.out.println(isEven(-32));
 
     }
 
@@ -173,7 +173,12 @@ public class Main {
      * Take name as input and print a greeting message for that particular name.
      */
     private static void printGreeting() {
-        return;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("What is your name? ");
+        String name = input.next();
+
+        System.out.println("Hello, " + name + "!");
     }
 
     /**
