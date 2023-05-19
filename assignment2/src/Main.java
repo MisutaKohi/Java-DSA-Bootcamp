@@ -3,40 +3,65 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Armstrong Number:");
-        System.out.println(getArmstrongNum(1, 10));
+        System.out.println(getArmstrongNum(200, 1000));
+
 
         System.out.println("Palindrome:");
         System.out.println("Racecar is " + isPalindrome("racecar"));
         System.out.println("Pikachu is " + isPalindrome("pikachu"));
-
-        System.out.println("Fibonnachi:");
-        System.out.println(getFibonacci(5));
-
-        System.out.println("Rupees to dollars:");
-        System.out.println(convertCurrency(34.34));
-
-        System.out.println("Larger num:");
-        System.out.println(compareNums(500, 5000));
-
-        System.out.println("Basic calculator:");
-        System.out.println(calculate());
-
-        System.out.println("Calculate interest:");
-        System.out.println(calculateInterest(100, 2, 0.22f));
-
-        System.out.println("Print greeting:");
-        printGreeting();
-
-        System.out.println("Is even:");
-        System.out.println(isEven());
+//
+//        System.out.println("Fibonnachi:");
+//        System.out.println(getFibonacci(5));
+//
+//        System.out.println("Rupees to dollars:");
+//        System.out.println(convertCurrency(34.34));
+//
+//        System.out.println("Larger num:");
+//        System.out.println(compareNums(500, 5000));
+//
+//        System.out.println("Basic calculator:");
+//        System.out.println(calculate());
+//
+//        System.out.println("Calculate interest:");
+//        System.out.println(calculateInterest(100, 2, 0.22f));
+//
+//        System.out.println("Print greeting:");
+//        printGreeting();
+//
+//        System.out.println("Is even:");
+//        System.out.println(isEven());
 
     }
 
     /**
-     * To find Armstrong Number between two given number.
+     * Find the first occurrence of an Armstrong number, if one exists,
+     * between 2 numbers. If none exists, function will return '-1'.
      */
     private static int getArmstrongNum(int a, int b) {
-        return 0;
+
+        for (int i = a; i <= b; i++) {
+            if (isArmstrong(i)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    private static boolean isArmstrong(int num) {
+
+        int numCopy = num;
+        int sum = 0;
+
+        if (num > 10) {
+            while (numCopy > 0) {
+                int digit = numCopy % 10;
+                numCopy = numCopy / 10;
+                sum += Math.pow(digit, 3);
+            }
+        } else {
+            sum += Math.pow(numCopy, 3);
+        }
+        return sum == num;
     }
 
     /**
