@@ -163,10 +163,10 @@ public class Main {
     }
 
     /**
-     * Write a program to input principal, time, and rate (P, T, R) from the user and find Simple Interest.
+     * Write a program to input principal (dollars), time (years), and rate (decimal) (P, T, R) from the user and find Simple Interest.
      */
-    private static double calculateInterest(double principal, int time, float rate) {
-        return 0;
+    private static double calculateInterest(double principal, float time, float rate) {
+        return principal * time * rate;
     }
 
     /**
