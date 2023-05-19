@@ -10,12 +10,12 @@ public class Main {
         System.out.println("Racecar is " + isPalindrome("racecar"));
         System.out.println("Pikachu is " + isPalindrome("pikachu"));
         System.out.println("A is " + isPalindrome("a"));
-//
-//        System.out.println("Fibonnachi:");
-//        System.out.println(getFibonacci(5));
-//
-//        System.out.println("Rupees to dollars:");
-//        System.out.println(convertCurrency(34.34));
+
+        System.out.println("Fibonnachi:");
+        System.out.println(getFibonacci(5));
+
+        System.out.println("Rupees to dollars:");
+        System.out.println(convertCurrency(34.34));
 //
 //        System.out.println("Larger num:");
 //        System.out.println(compareNums(500, 5000));
@@ -90,14 +90,28 @@ public class Main {
      * To calculate Fibonacci Series up to n numbers.
      */
     private static int getFibonacci(int n) {
-        return 0;
+
+        int previousFibonacciNum = 0;
+
+        if (n == 0) {
+            return previousFibonacciNum;
+        }
+
+        int fibonacciNum = 1;
+
+        while (n > 0) {
+            fibonacciNum = previousFibonacciNum + fibonacciNum;
+            previousFibonacciNum = fibonacciNum - previousFibonacciNum;
+            n--;
+        }
+        return fibonacciNum;
     }
 
     /**
      * Input currency in rupees and output in USD.
      */
-    private static double convertCurrency(double rupees) {
-        return 0;
+    private static String convertCurrency(double rupees) {
+        return (Math.floor(0.012 * rupees * 100) / 100.0) + " Dollars";
     }
 
     /**
