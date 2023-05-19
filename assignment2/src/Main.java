@@ -2,21 +2,48 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println(getArmstrongNum());
+        System.out.println("Armstrong Number:");
+        System.out.println(getArmstrongNum(1, 10));
+
+        System.out.println("Palindrome:");
+        System.out.println("Racecar is " + isPalindrome("racecar"));
+        System.out.println("Pikachu is " + isPalindrome("pikachu"));
+
+        System.out.println("Fibonnachi:");
+        System.out.println(getFibonacci(5));
+
+        System.out.println("Rupees to dollars:");
+        System.out.println(convertCurrency(34.34));
+
+        System.out.println("Larger num:");
+        System.out.println(compareNums(500, 5000));
+
+        System.out.println("Basic calculator:");
+        System.out.println(calculate());
+
+        System.out.println("Calculate interest:");
+        System.out.println(calculateInterest(100, 2, 0.22f));
+
+        System.out.println("Print greeting:");
+        printGreeting();
+
+        System.out.println("Is even:");
+        System.out.println(isEven());
+
     }
 
     /**
      * To find Armstrong Number between two given number.
      */
     private static int getArmstrongNum(int a, int b) {
-        return 7;
+        return 0;
     }
 
     /**
      * To find out whether the given String is Palindrome or not.
      */
-    private static boolean isPalindrome(String a, String b) {
-        return true;
+    private static boolean isPalindrome(String a) {
+        return false;
     }
 
     /**
@@ -30,21 +57,21 @@ public class Main {
      * Input currency in rupees and output in USD.
      */
     private static double convertCurrency(double rupees) {
-        return 77.7;
+        return 0;
     }
 
     /**
      * Take 2 numbers as input and print the largest number.
      */
-    private static double compareNums() {
-        return 7;
+    private static double compareNums(int a, int b) {
+        return 0;
     }
 
     /**
      * Take in two numbers and an operator (+, -, *, /) and calculate the value. (Use if conditions)
      */
     private static double calculate() {
-        return 33.33;
+        return 0;
     }
 
     /**
@@ -57,14 +84,14 @@ public class Main {
     /**
      * Take name as input and print a greeting message for that particular name.
      */
-    private static void printGreeting(String name) {
+    private static void printGreeting() {
         return;
     }
 
     /**
      * Write a program to print whether a number is even or odd, also take input from the user.
      */
-    private static boolean isEven(int num) {
+    private static boolean isEven() {
         return true;
     }
 }
