@@ -21,8 +21,8 @@ public class Main {
 //        System.out.println("Larger num:");
 //        System.out.println(compareNums(500, 500));
 
-        System.out.println("Basic calculator:");
-        System.out.println(calculate());
+//        System.out.println("Basic calculator:");
+//        System.out.println(calculate());
 //
 //        System.out.println("Calculate interest:");
 //        System.out.println(calculateInterest(100, 2, 0.22f));
@@ -30,8 +30,8 @@ public class Main {
 //        System.out.println("Print greeting:");
 //        printGreeting();
 //
-//        System.out.println("Is even:");
-//        System.out.println(isEven());
+        System.out.println("Is even:");
+        System.out.println(isEven(-32));
 
     }
 
@@ -179,7 +179,7 @@ public class Main {
     /**
      * Write a program to print whether a number is even or odd, also take input from the user.
      */
-    private static boolean isEven() {
-        return true;
+    private static boolean isEven(int num) {
+        return num % 2 == 0;
     }
 }
